@@ -1,0 +1,33 @@
+{
+ "doctype": "Report",
+ "name": "Daily Purchases Report",
+ "ref_doctype": "Daily Purchases",
+ "module": "Restaurant Operations",
+ "is_standard": "Yes",
+ "report_type": "Script Report",
+ "creation": "2026-05-09 00:00:00",
+ "modified": "2026-05-09 00:00:00",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "report_name": "Daily Purchases Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Restaurant Manager"
+  },
+  {
+   "role": "Kitchen User"
+  },
+  {
+   "role": "Cashier User"
+  },
+  {
+   "role": "Purchase User"
+  },
+  {
+   "role": "Restaurant Accountant"
+  }
+ ]
+}

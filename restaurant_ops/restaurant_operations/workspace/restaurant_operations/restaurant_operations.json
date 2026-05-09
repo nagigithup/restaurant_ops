@@ -1,0 +1,287 @@
+{
+ "app": "restaurant_ops",
+ "charts": [],
+ "content": "[{\"id\": \"hero\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h3\\\"><b>Restaurant Operations</b></span><div class=\\\"text-muted\\\">Daily kitchen production, purchases, cashier sales, wastage, and food cost control</div>\", \"col\": 12}}, {\"id\": \"card_0\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Today Productions\", \"col\": 4}}, {\"id\": \"card_1\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Today Sales Summaries\", \"col\": 4}}, {\"id\": \"card_2\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Today Purchases\", \"col\": 4}}, {\"id\": \"card_3\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Open Wastage Records\", \"col\": 4}}, {\"id\": \"card_4\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Total Sales Amount\", \"col\": 4}}, {\"id\": \"card_5\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Total Purchase Amount\", \"col\": 4}}, {\"id\": \"ops_header\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Daily Operations / العمليات اليومية</b></span>\", \"col\": 12}}, {\"id\": \"s1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Kitchen Production\", \"col\": 3}}, {\"id\": \"s2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Sales Summary\", \"col\": 3}}, {\"id\": \"s3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Daily Purchases\", \"col\": 3}}, {\"id\": \"s4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Kitchen Wastage\", \"col\": 3}}, {\"id\": \"areas\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Work Areas</b></span>\", \"col\": 12}}, {\"id\": \"c1\", \"type\": \"card\", \"data\": {\"card_name\": \"Daily Operations\", \"col\": 3}}, {\"id\": \"c2\", \"type\": \"card\", \"data\": {\"card_name\": \"Setup\", \"col\": 3}}, {\"id\": \"c3\", \"type\": \"card\", \"data\": {\"card_name\": \"ERPNext Linked Documents\", \"col\": 3}}, {\"id\": \"c4\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 3}}]",
+ "creation": "2026-05-09 00:00:00",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "utensils",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Restaurant Operations",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Daily Operations",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Daily Kitchen Production",
+   "link_count": 0,
+   "link_to": "Daily Kitchen Production",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Daily Sales Summary",
+   "link_count": 0,
+   "link_to": "Daily Sales Summary",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Daily Purchases",
+   "link_count": 0,
+   "link_to": "Daily Purchases",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Kitchen Wastage",
+   "link_count": 0,
+   "link_to": "Kitchen Wastage",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Setup",
+   "link_count": 5,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Restaurant Branch",
+   "link_count": 0,
+   "link_to": "Restaurant Branch",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Restaurant Settings",
+   "link_count": 0,
+   "link_to": "Restaurant Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Item",
+   "link_count": 0,
+   "link_to": "Item",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "BOM",
+   "link_count": 0,
+   "link_to": "BOM",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Warehouse",
+   "link_count": 0,
+   "link_to": "Warehouse",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "ERPNext Linked Documents",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Stock Entry",
+   "link_count": 0,
+   "link_to": "Stock Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Invoice",
+   "link_count": 0,
+   "link_to": "Sales Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase Invoice",
+   "link_count": 0,
+   "link_to": "Purchase Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase Receipt",
+   "link_count": 0,
+   "link_to": "Purchase Receipt",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Daily Production vs Sales Report",
+   "link_count": 0,
+   "link_to": "Daily Production vs Sales Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Food Cost Report",
+   "link_count": 0,
+   "link_to": "Food Cost Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Daily Purchases Report",
+   "link_count": 0,
+   "link_to": "Daily Purchases Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Wastage Report",
+   "link_count": 0,
+   "link_to": "Wastage Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-05-09 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Restaurant Operations",
+ "name": "Restaurant Operations",
+ "number_cards": [
+  {
+   "number_card_name": "Today Productions",
+   "label": "Today Productions"
+  },
+  {
+   "number_card_name": "Today Sales Summaries",
+   "label": "Today Sales Summaries"
+  },
+  {
+   "number_card_name": "Today Purchases",
+   "label": "Today Purchases"
+  },
+  {
+   "number_card_name": "Open Wastage Records",
+   "label": "Open Wastage Records"
+  },
+  {
+   "number_card_name": "Total Sales Amount",
+   "label": "Total Sales Amount"
+  },
+  {
+   "number_card_name": "Total Purchase Amount",
+   "label": "Total Purchase Amount"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 25.0,
+ "shortcuts": [
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Kitchen Production",
+   "link_to": "Daily Kitchen Production",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Sales Summary",
+   "link_to": "Daily Sales Summary",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Daily Purchases",
+   "link_to": "Daily Purchases",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "label": "Kitchen Wastage",
+   "link_to": "Kitchen Wastage",
+   "type": "DocType"
+  }
+ ],
+ "title": "Restaurant Operations",
+ "type": "Workspace"
+}

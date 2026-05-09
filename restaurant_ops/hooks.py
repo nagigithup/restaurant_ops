@@ -8,7 +8,7 @@ app_license = "mit"
 # Apps
 # ------------------
 
-# required_apps = []
+required_apps = ["erpnext"]
 
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
@@ -25,7 +25,7 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/restaurant_ops/css/restaurant_ops.css"
+app_include_css = "/assets/restaurant_ops/css/restaurant_ops.css"
 # app_include_js = "/assets/restaurant_ops/js/restaurant_ops.js"
 
 # include js, css files in header of web template
@@ -86,7 +86,8 @@ app_license = "mit"
 # ------------
 
 # before_install = "restaurant_ops.install.before_install"
-# after_install = "restaurant_ops.install.after_install"
+after_install = "restaurant_ops.install.after_install"
+after_migrate = "restaurant_ops.install.after_migrate"
 
 # Uninstallation
 # ------------

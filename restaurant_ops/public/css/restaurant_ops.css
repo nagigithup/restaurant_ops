@@ -1,0 +1,8 @@
+body[data-route="Workspaces/Restaurant Operations"] .layout-main-section { background: linear-gradient(180deg, #faf7f2 0%, #fff 46%); }
+body[data-route="Workspaces/Restaurant Operations"] .widget,
+body[data-route="Workspaces/Restaurant Operations"] .shortcut-widget-box,
+body[data-route="Workspaces/Restaurant Operations"] .number-widget-box { border: 1px solid #eadfce; border-radius: 8px; box-shadow: 0 8px 22px rgba(57, 43, 30, .06); }
+body[data-route="Workspaces/Restaurant Operations"] .ce-header .h3 b { color: #7c2d12; }
+body[data-route="Workspaces/Restaurant Operations"] .ce-header .h4 b { color: #1f4d3a; }
+body[data-route="Workspaces/Restaurant Operations"] .shortcut-widget-box { min-height: 86px; }
+.form-page .form-dashboard .form-links { border-radius: 8px; }
