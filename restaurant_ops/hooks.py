@@ -11,15 +11,14 @@ app_license = "mit"
 required_apps = ["erpnext"]
 
 # Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "restaurant_ops",
-# 		"logo": "/assets/restaurant_ops/logo.png",
-# 		"title": "Restaurant Operations",
-# 		"route": "/restaurant_ops",
-# 		"has_permission": "restaurant_ops.api.permission.has_app_permission"
-# 	}
-# ]
+add_to_apps_screen = [
+	{
+		"name": "restaurant_ops",
+		"logo": "/assets/restaurant_ops/images/restaurant_ops.svg",
+		"title": "Restaurant Operations",
+		"route": "/app/restaurant-operations",
+	}
+]
 
 # Includes in <head>
 # ------------------
@@ -256,4 +255,3 @@ after_migrate = "restaurant_ops.install.after_migrate"
 # ------------
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
-

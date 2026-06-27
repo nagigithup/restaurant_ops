@@ -46,7 +46,15 @@ class DailyKitchenProduction(Document):
 			se.insert(ignore_permissions=True)
 			if settings.auto_submit_stock_entries:
 				se.submit()
-			self.append("linked_stock_entries", {"stock_entry": se.name, "meal_item": row.meal_item, "qty": row.qty_produced})
+			self.append(
+				"linked_stock_entries",
+				{
+					"stock_entry": se.name,
+					"meal_item": row.meal_item,
+					"item_name": frappe.db.get_value("Item", row.meal_item, "item_name"),
+					"qty": row.qty_produced,
+				},
+			)
 		self.status = "Completed" if settings.auto_submit_stock_entries else "Stock Entry Created"
 		self.save(ignore_permissions=True)
 		return [row.stock_entry for row in self.linked_stock_entries]

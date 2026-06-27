@@ -32,6 +32,28 @@ function call_action(frm, method) {
 	frappe.call({method, args: {name: frm.doc.name}, freeze: true, callback: () => frm.reload_doc()});
 }
 
+function set_item_defaults(frm, cdt, cdn) {
+	let row = locals[cdt][cdn];
+	if (!row || !row.item) return;
+	frappe.call({
+		method: 'restaurant_ops.restaurant_operations.ops_utils.get_item_defaults',
+		args: {item_code: row.item, purpose: 'purchase'},
+		callback(r) {
+			let details = r.message || {};
+			frappe.model.set_value(cdt, cdn, 'item_name', details.item_name || '');
+			if (details.stock_uom) {
+				frappe.model.set_value(cdt, cdn, 'uom', details.stock_uom);
+			}
+			if (details.purchase_rate) {
+				frappe.model.set_value(cdt, cdn, 'rate', details.purchase_rate);
+			}
+			let current = locals[cdt][cdn];
+			frappe.model.set_value(cdt, cdn, 'amount', flt(current.qty) * flt(current.rate));
+			purchase_total(frm);
+		}
+	});
+}
+
 function purchase_total(frm) {
 	let total = 0;
 	(frm.doc.purchase_items || []).forEach(row => total += flt(row.qty) * flt(row.rate));
@@ -49,4 +71,8 @@ frappe.ui.form.on('Daily Purchases', {
 		}
 	}
 });
-frappe.ui.form.on('Daily Purchase Item', { qty(frm, cdt, cdn) { let r = locals[cdt][cdn]; frappe.model.set_value(cdt, cdn, 'amount', flt(r.qty) * flt(r.rate)); purchase_total(frm); }, rate(frm, cdt, cdn) { let r = locals[cdt][cdn]; frappe.model.set_value(cdt, cdn, 'amount', flt(r.qty) * flt(r.rate)); purchase_total(frm); } });
+frappe.ui.form.on('Daily Purchase Item', {
+	item: set_item_defaults,
+	qty(frm, cdt, cdn) { let r = locals[cdt][cdn]; frappe.model.set_value(cdt, cdn, 'amount', flt(r.qty) * flt(r.rate)); purchase_total(frm); },
+	rate(frm, cdt, cdn) { let r = locals[cdt][cdn]; frappe.model.set_value(cdt, cdn, 'amount', flt(r.qty) * flt(r.rate)); purchase_total(frm); }
+});

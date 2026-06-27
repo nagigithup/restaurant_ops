@@ -32,6 +32,25 @@ function call_action(frm, method) {
 	frappe.call({method, args: {name: frm.doc.name}, freeze: true, callback: () => frm.reload_doc()});
 }
 
+function set_item_defaults(frm, cdt, cdn) {
+	let row = locals[cdt][cdn];
+	if (!row || !row.meal_item) return;
+	frappe.call({
+		method: 'restaurant_ops.restaurant_operations.ops_utils.get_item_defaults',
+		args: {item_code: row.meal_item, purpose: 'sales'},
+		callback(r) {
+			let details = r.message || {};
+			frappe.model.set_value(cdt, cdn, 'item_name', details.item_name || '');
+			if (details.sales_rate) {
+				frappe.model.set_value(cdt, cdn, 'rate', details.sales_rate);
+			}
+			let current = locals[cdt][cdn];
+			frappe.model.set_value(cdt, cdn, 'amount', flt(current.qty_sold) * flt(current.rate));
+			sales_total(frm);
+		}
+	});
+}
+
 function sales_total(frm) {
 	let total = 0;
 	(frm.doc.sales_items || []).forEach(row => total += flt(row.qty_sold) * flt(row.rate));
@@ -49,4 +68,8 @@ frappe.ui.form.on('Daily Sales Summary', {
 		}
 	}
 });
-frappe.ui.form.on('Daily Sales Summary Item', { qty_sold(frm, cdt, cdn) { let r = locals[cdt][cdn]; frappe.model.set_value(cdt, cdn, 'amount', flt(r.qty_sold) * flt(r.rate)); sales_total(frm); }, rate(frm, cdt, cdn) { let r = locals[cdt][cdn]; frappe.model.set_value(cdt, cdn, 'amount', flt(r.qty_sold) * flt(r.rate)); sales_total(frm); } });
+frappe.ui.form.on('Daily Sales Summary Item', {
+	meal_item: set_item_defaults,
+	qty_sold(frm, cdt, cdn) { let r = locals[cdt][cdn]; frappe.model.set_value(cdt, cdn, 'amount', flt(r.qty_sold) * flt(r.rate)); sales_total(frm); },
+	rate(frm, cdt, cdn) { let r = locals[cdt][cdn]; frappe.model.set_value(cdt, cdn, 'amount', flt(r.qty_sold) * flt(r.rate)); sales_total(frm); }
+});

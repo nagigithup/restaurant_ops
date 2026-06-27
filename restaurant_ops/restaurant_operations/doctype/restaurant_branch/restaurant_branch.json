@@ -6,18 +6,42 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "branch_identity_section",
+  "naming_series",
   "branch_name",
+  "identity_column",
   "company",
+  "branch_overview_section",
+  "branch_overview_card",
   "warehouse_section",
   "raw_material_warehouse",
+  "warehouse_column_1",
   "wip_warehouse",
+  "warehouse_column_2",
   "finished_goods_warehouse",
   "accounting_section",
   "cost_center",
+  "accounting_column_1",
   "daily_sales_customer",
+  "accounting_column_2",
   "default_supplier"
  ],
  "fields": [
+  {
+   "fieldname": "branch_identity_section",
+   "fieldtype": "Section Break",
+   "label": "Branch Identity / بيانات الفرع"
+  },
+  {
+   "default": "HB.####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "no_copy": 1,
+   "options": "HB.####",
+   "reqd": 1
+  },
   {
    "fieldname": "branch_name",
    "fieldtype": "Data",
@@ -27,12 +51,26 @@
    "in_standard_filter": 1
   },
   {
+   "fieldname": "identity_column",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
    "options": "Company",
    "reqd": 1,
    "in_list_view": 1
+  },
+  {
+   "fieldname": "branch_overview_section",
+   "fieldtype": "Section Break",
+   "label": "Operations Card / بطاقة التشغيل"
+  },
+  {
+   "fieldname": "branch_overview_card",
+   "fieldtype": "HTML",
+   "options": "<div class=\"restaurant-form-card\"><strong>Branch defaults</strong><p>Use this branch to auto-fill warehouses, customer, supplier, and company on daily production, sales, purchases, and wastage records.</p></div>"
   },
   {
    "fieldname": "warehouse_section",
@@ -47,10 +85,18 @@
    "reqd": 1
   },
   {
+   "fieldname": "warehouse_column_1",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "wip_warehouse",
    "fieldtype": "Link",
    "label": "WIP Warehouse",
    "options": "Warehouse"
+  },
+  {
+   "fieldname": "warehouse_column_2",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "finished_goods_warehouse",
@@ -71,10 +117,18 @@
    "options": "Cost Center"
   },
   {
+   "fieldname": "accounting_column_1",
+   "fieldtype": "Column Break"
+  },
+  {
    "fieldname": "daily_sales_customer",
    "fieldtype": "Link",
    "label": "Daily Sales Customer",
    "options": "Customer"
+  },
+  {
+   "fieldname": "accounting_column_2",
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "default_supplier",

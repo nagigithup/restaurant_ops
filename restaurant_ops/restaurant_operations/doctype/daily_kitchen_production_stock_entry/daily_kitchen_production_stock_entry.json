@@ -8,6 +8,7 @@
  "field_order": [
   "stock_entry",
   "meal_item",
+  "item_name",
   "qty"
  ],
  "fields": [
@@ -24,6 +25,14 @@
    "label": "Meal Item",
    "options": "Item",
    "in_list_view": 1
+  },
+  {
+   "fetch_from": "meal_item.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Name",
+   "read_only": 1
   },
   {
    "fieldname": "qty",

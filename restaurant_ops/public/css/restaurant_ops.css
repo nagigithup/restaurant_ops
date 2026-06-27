@@ -6,3 +6,26 @@ body[data-route="Workspaces/Restaurant Operations"] .ce-header .h3 b { color: #7
 body[data-route="Workspaces/Restaurant Operations"] .ce-header .h4 b { color: #1f4d3a; }
 body[data-route="Workspaces/Restaurant Operations"] .shortcut-widget-box { min-height: 86px; }
 .form-page .form-dashboard .form-links { border-radius: 8px; }
+.restaurant-form-card {
+	background: #fffaf0;
+	border: 1px solid #eadfce;
+	border-left: 4px solid #0f766e;
+	border-radius: 8px;
+	color: #2f2a22;
+	margin: 4px 0 14px;
+	padding: 14px 16px;
+}
+.restaurant-form-card strong {
+	color: #14532d;
+	display: block;
+	font-size: 14px;
+	margin-bottom: 4px;
+}
+.restaurant-form-card p {
+	color: #6b5d4a;
+	margin: 0;
+}
+.form-grid .grid-row .data-row .col[data-fieldname="item_name"] {
+	color: #475569;
+	font-weight: 500;
+}

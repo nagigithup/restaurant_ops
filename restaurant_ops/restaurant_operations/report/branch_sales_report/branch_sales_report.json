@@ -1,0 +1,19 @@
+{
+ "creation": "2026-05-10 00:00:00",
+ "doctype": "Report",
+ "is_standard": "Yes",
+ "modified": "2026-05-10 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Restaurant Operations",
+ "name": "Branch Sales Report",
+ "owner": "Administrator",
+ "ref_doctype": "Daily Sales Summary",
+ "report_name": "Branch Sales Report",
+ "report_type": "Script Report",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "Restaurant Manager"},
+  {"role": "Cashier User"},
+  {"role": "Restaurant Accountant"}
+ ]
+}

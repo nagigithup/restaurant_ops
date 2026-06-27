@@ -171,7 +171,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Reports",
-   "link_count": 4,
+   "link_count": 10,
    "onboard": 0,
    "type": "Card Break"
   },
@@ -211,6 +211,66 @@
    "label": "Wastage Report",
    "link_count": 0,
    "link_to": "Wastage Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Branch Sales Report",
+   "link_count": 0,
+   "link_to": "Branch Sales Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Daily Orders Report",
+   "link_count": 0,
+   "link_to": "Daily Orders Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Staff Performance Report",
+   "link_count": 0,
+   "link_to": "Staff Performance Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Inventory Usage Report",
+   "link_count": 0,
+   "link_to": "Inventory Usage Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Table Occupancy Report",
+   "link_count": 0,
+   "link_to": "Table Occupancy Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Menu Item Performance Report",
+   "link_count": 0,
+   "link_to": "Menu Item Performance Report",
    "link_type": "Report",
    "onboard": 0,
    "type": "Link"

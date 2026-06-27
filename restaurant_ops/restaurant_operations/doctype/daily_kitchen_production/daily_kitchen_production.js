@@ -32,6 +32,22 @@ function call_action(frm, method) {
 	frappe.call({method, args: {name: frm.doc.name}, freeze: true, callback: () => frm.reload_doc()});
 }
 
+function set_item_defaults(cdt, cdn, item_field, purpose) {
+	let row = locals[cdt][cdn];
+	if (!row || !row[item_field]) return;
+	frappe.call({
+		method: 'restaurant_ops.restaurant_operations.ops_utils.get_item_defaults',
+		args: {item_code: row[item_field], purpose},
+		callback(r) {
+			let details = r.message || {};
+			frappe.model.set_value(cdt, cdn, 'item_name', details.item_name || '');
+			if (purpose === 'production' && details.default_bom) {
+				frappe.model.set_value(cdt, cdn, 'bom', details.default_bom);
+			}
+		}
+	});
+}
+
 frappe.ui.form.on('Daily Kitchen Production', {
 	onload: set_today,
 	branch: apply_branch_defaults,
@@ -42,5 +58,11 @@ frappe.ui.form.on('Daily Kitchen Production', {
 			frm.add_custom_button(__('View Stock Entries'), () => frappe.set_route('List', 'Stock Entry', {daily_kitchen_production: frm.doc.name}));
 			frm.add_custom_button(__('Cancel Linked Stock Entries'), () => call_action(frm, 'restaurant_ops.restaurant_operations.doctype.daily_kitchen_production.daily_kitchen_production.cancel_linked_stock_entries'));
 		}
+	}
+});
+
+frappe.ui.form.on('Daily Kitchen Production Item', {
+	meal_item(frm, cdt, cdn) {
+		set_item_defaults(cdt, cdn, 'meal_item', 'production');
 	}
 });
